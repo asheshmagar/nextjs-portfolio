@@ -18,14 +18,14 @@ const Sidebar = () => {
 							</Link> */}
 							<Link
 								href="/posts"
-								className="font-semibold text-lg text-gray-800 tracking-wider hover:opacity-70"
+								className="font-semibold text-lg text-gray-800 tracking-wider hover:opacity-70 hover:translate-x-1 transition duration-20"
 								prefetch
 							>
 								Posts
 							</Link>
 							<a
 								href="/resume.pdf"
-								className="font-semibold text-lg text-gray-800 tracking-wider hover:opacity-70"
+								className="font-semibold text-lg text-gray-800 tracking-wider hover:opacity-70 hover:translate-x-1 transition duration-20"
 							>
 								CV
 							</a>
@@ -37,25 +37,25 @@ const Sidebar = () => {
 						</p>
 						<div className="flex flex-col gap-2">
 							<a
-								className="font-normal text-sm text-gray-600 tracking-wider"
+								className="font-normal text-sm text-gray-600 tracking-wider hover:translate-x-1 transition duration-20"
 								href="mailto:ashesh.ido@gmail.com"
 							>
 								Mail
 							</a>
 							<a
-								className="font-normal text-sm text-gray-600 tracking-wider"
+								className="font-normal text-sm text-gray-600 tracking-wider hover:translate-x-1 transition duration-20"
 								href="https://www.linkedin.com/in/ashesh-ido/"
 							>
 								LinkedIn
 							</a>
 							<a
-								className="font-normal text-sm text-gray-600 tracking-wider"
+								className="font-normal text-sm text-gray-600 tracking-wider hover:translate-x-1 transition duration-20"
 								href="https://twitter.com/ashesh_ido"
 							>
 								Twitter
 							</a>
 							<a
-								className="font-normal text-sm text-gray-600 tracking-wider"
+								className="font-normal text-sm text-gray-600 tracking-wider hover:translate-x-1 transition duration-20"
 								href="https://profiles.wordpress.org/asheshmagar/"
 							>
 								WordPress.org
