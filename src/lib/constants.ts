@@ -109,3 +109,76 @@ export const PROJECTS = [
 		thumbnail: '/assets/projects/flash.webp'
 	}
 ];
+
+export const EXPERTISE_TECHS = [
+	{
+		id: 1,
+		name: 'React',
+		image: '/assets/svgs/reactjs.svg'
+	},
+	{
+		id: 2,
+		name: 'Typescript',
+		image: '/assets/svgs/typescript.svg'
+	},
+	{
+		id: 3,
+		name: 'JavaScript',
+		image: '/assets/svgs/js.svg'
+	},
+	{
+		id: 4,
+		name: 'HTML',
+		image: '/assets/svgs/html5.svg'
+	},
+	{
+		id: 5,
+		name: 'CSS',
+		image: '/assets/svgs/css3.svg'
+	},
+	{
+		id: 6,
+		name: 'Tailwind',
+		image: '/assets/svgs/tailwindcss.svg'
+	},
+	{
+		id: 7,
+		name: 'PHP',
+		image: '/assets/svgs/php.svg'
+	},
+	{
+		id: 8,
+		name: 'MySql',
+		image: '/assets/svgs/mysql.svg'
+	},
+	{
+		id: 9,
+		name: 'WordPress',
+		image: '/assets/svgs/wordpress.svg'
+	},
+	{
+		id: 10,
+		name: 'Python',
+		image: '/assets/svgs/python.svg'
+	},
+	{
+		id: 11,
+		name: 'jQuery',
+		image: '/assets/svgs/jquery.svg'
+	},
+	{
+		id: 12,
+		name: 'Svelte',
+		image: '/assets/svgs/sveltejs.svg'
+	},
+	{
+		id: 13,
+		name: 'NexJS',
+		image: '/assets/svgs/nextjs2.svg'
+	},
+	{
+		id: 14,
+		name: 'Webpack',
+		image: '/assets/svgs/webpack.svg'
+	}
+];
