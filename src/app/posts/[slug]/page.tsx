@@ -5,6 +5,52 @@ import 'highlight.js/styles/atom-one-light.min.css';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { PostBody } from '../../_components/post-body';
+import { baseUrl } from '../../sitemap';
+
+export async function generateStaticParams() {
+	let posts = PostsService.getAll();
+	return posts.map((post) => ({
+		slug: post.slug
+	}));
+}
+
+export function generateMetadata({
+	params
+}: {
+	params: { slug: string };
+	searchParams: { [key: string]: string | string[] | undefined };
+}) {
+	let post = PostsService.getAll().find((post) => post.slug === params.slug);
+	if (!post) {
+		return;
+	}
+
+	let { title, publishedAt: publishedTime, summary: description } = post;
+	let ogImage = `${baseUrl}/og?title=${encodeURIComponent(title)}`;
+
+	return {
+		title,
+		description,
+		openGraph: {
+			title,
+			description,
+			type: 'article',
+			publishedTime,
+			url: `${baseUrl}/blog/${post.slug}`,
+			images: [
+				{
+					url: ogImage
+				}
+			]
+		},
+		twitter: {
+			card: 'summary_large_image',
+			title,
+			description,
+			images: [ogImage]
+		}
+	};
+}
 
 export default async function Post({ params }: Params) {
 	const post = PostsService.getBySlug(params.slug);
