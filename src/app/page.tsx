@@ -41,7 +41,9 @@ export default function Index() {
 				</div>
 				<div className="pt-[40px]">
 					<hr className="mb-6" />
-					<p className="uppercase py-4 text-gray-400 text-sm">Projects</p>
+					<p className="uppercase py-4 text-gray-400 text-sm">
+						Involvement in Various Endeavors
+					</p>
 					<div className="-mx-8 mt-8 mb-20 md:-mx-16">
 						<HeroParallax items={PROJECTS} />
 					</div>
