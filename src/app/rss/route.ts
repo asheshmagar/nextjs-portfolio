@@ -3,7 +3,7 @@ import { PostsService } from '../../lib/api';
 import { baseUrl } from '../sitemap';
 
 export async function GET() {
-	let posts = await PostsService.getAll();
+	let posts = PostsService.getAll();
 
 	const items = posts
 		.sort((a, b) => {
@@ -16,7 +16,7 @@ export async function GET() {
 			(post) =>
 				`<item>
 					<title>${post.title}</title>
-					<link>${baseUrl}/blog/${post.slug}</link>
+					<link>${baseUrl}/posts/${post.slug}</link>
 					<description>${post.summary || ' '}</description>
 					<pubDate>${format(post.publishedAt, "yyyy-MM-dd'T'HH:mm:ssXX")}</pubDate>
 				</item>`
