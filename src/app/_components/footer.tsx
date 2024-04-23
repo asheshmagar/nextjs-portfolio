@@ -5,6 +5,7 @@ import { cn } from '../../lib/utils';
 
 export function Footer() {
 	const pathname = usePathname();
+	if (pathname !== '/') return null;
 	return (
 		<div
 			className={cn('flex p-6 md:px-20 items-center gap-4 justify-between text-gray-500', {
