@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import { Titillium_Web } from 'next/font/google';
 import Providers from './_components/progressbar-provider';
 import './globals.css';
+import { baseUrl } from './sitemap';
 
 const titillium = Titillium_Web({
 	subsets: ['latin'],
@@ -12,8 +13,30 @@ const titillium = Titillium_Web({
 });
 
 export const metadata: Metadata = {
-	title: `Ashesh's Site`,
-	description: `I'm knowledgeable and eager to discuss subjects related to JavaScript, TypeScript, React, web development, WordPress, and PHP MySQL.`
+	title: {
+		default: `Ashesh's Site`,
+		template: `%s | Ashesh's Site`
+	},
+	description: `I'm knowledgeable and eager to discuss subjects related to JavaScript, TypeScript, React, web development, WordPress, and PHP MySQL.`,
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			'max-video-preview': -1,
+			'max-image-preview': 'large',
+			'max-snippet': -1
+		}
+	},
+	openGraph: {
+		title: `Ashesh's Site`,
+		description: `I'm knowledgeable and eager to discuss subjects related to JavaScript, TypeScript, React, web development, WordPress, and PHP MySQL.`,
+		url: baseUrl,
+		siteName: `Ashesh's Site`,
+		locale: 'en_US',
+		type: 'website'
+	}
 };
 
 export default function RootLayout({
@@ -28,12 +51,10 @@ export default function RootLayout({
 				<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
 				<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
 				<link rel="manifest" href="/favicon/site.webmanifest" />
-				<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000" />
 				<link rel="shortcut icon" href="/favicon/favicon.ico" />
 				<meta name="msapplication-TileColor" content="#000000" />
-				<meta name="msapplication-config" content="/favicon/browserconfig.xml" />
 				<meta name="theme-color" content="#000" />
-				<link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+				<link rel="alternate" type="application/rss+xml" href="/rss" />
 			</head>
 			<body className={titillium.className}>
 				<Providers>
