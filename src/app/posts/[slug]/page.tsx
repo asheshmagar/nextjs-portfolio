@@ -1,15 +1,13 @@
-import { getAllPosts, getPostBySlug } from '@/lib/api';
-import { CMS_NAME } from '@/lib/constants';
+import { PostsService } from '@/lib/api';
 import markdownToHtml from '@/lib/markdownToHtml';
 import { format } from 'date-fns';
 import 'highlight.js/styles/atom-one-light.min.css';
-import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { PostBody } from '../../_components/post-body';
 
 export default async function Post({ params }: Params) {
-	const post = getPostBySlug(params.slug);
+	const post = PostsService.getBySlug(params.slug);
 
 	if (!post) {
 		return notFound();
@@ -31,7 +29,7 @@ export default async function Post({ params }: Params) {
 					{post.title}
 				</h3>
 				<p className="tabular-nums text-sm text-gray-500">
-					{format(post.date, 'MMMM dd, yyyy')}
+					{format(post.publishedAt, 'MMMM dd, yyyy')}
 				</p>
 			</div>
 			<PostBody content={content} />
