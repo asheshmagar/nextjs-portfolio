@@ -1,5 +1,12 @@
 'use client';
-import { MotionValue, motion, useScroll, useSpring, useTransform } from 'framer-motion';
+import {
+	MotionStyle,
+	MotionValue,
+	motion,
+	useScroll,
+	useSpring,
+	useTransform
+} from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -39,9 +46,10 @@ export const HeroParallax = ({
 	return (
 		<div
 			ref={ref}
-			className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+			className="h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
 		>
-			{/* <Header /> */}
+			<Header />
+			{/* <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full min-he  left-0 top-0"></div> */}
 			<motion.div
 				style={{
 					rotateX,
@@ -71,17 +79,21 @@ export const HeroParallax = ({
 	);
 };
 
-export const Header = () => {
+export const Header = (props: { style?: MotionStyle }) => {
 	return (
-		<div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-			<h1 className="text-2xl md:text-7xl font-bold ">
-				The Ultimate <br /> development studio
+		<motion.div
+			className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0"
+			{...props}
+		>
+			<h1 className="text-2xl md:text-7xl font-bold bg-gradient-to-r from-gray-400 to-gray-700 bg-clip-text text-transparent leading-tight">
+				Artisan <br /> of Dynamic Web Solutions
 			</h1>
-			<p className="max-w-2xl text-base md:text-xl mt-8 ">
-				We build beautiful products with the latest technologies and frameworks. We are a
-				team of passionate developers and designers that love to build amazing products.
+			<p className="max-w-2xl text-base md:text-xl mt-8 bg-gradient-to-l from-gray-400 to-gray-700 bg-clip-text text-transparent">
+				Leveraging expertise in PHP, WordPress, JavaScript, React, HTML, CSS, and TypeScript
+				to architect dynamic web solutions. Experienced in crafting bespoke themes and
+				plugins for WordPress, ensuring seamless integration and optimal performance.
 			</p>
-		</div>
+		</motion.div>
 	);
 };
 
