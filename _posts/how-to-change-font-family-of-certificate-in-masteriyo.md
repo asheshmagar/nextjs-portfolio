@@ -1,13 +1,7 @@
 ---
 title: "How to change font family of certificate in Masteriyo LMS WordPress?"
-excerpt: "Customize the font family used in Masteriyo certificates by downloading desired TTF fonts, adding them to your child theme directory, and configuring mPDF in functions.php to reference the new fonts for specific certificate elements."
-coverImage: "/assets/blog/preview/cover.jpg"
-date: "2023-10-24T05:35:07.322Z"
-author:
-  name: Ashes Thapa
-  picture: "/assets/blog/authors/joe.jpeg"
-ogImage:
-  url: "/assets/blog/preview/cover.jpg"
+summary: "Customize the font family used in Masteriyo certificates by downloading desired TTF fonts, adding them to your child theme directory, and configuring mPDF in functions.php to reference the new fonts for specific certificate elements."
+publishedAt: "2023-10-24T05:35:07.322Z"
 tags:
   - wordpress
   - masteriyo
