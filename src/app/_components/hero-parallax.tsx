@@ -82,7 +82,7 @@ export const HeroParallax = ({
 export const Header = (props: { style?: MotionStyle }) => {
 	return (
 		<motion.div
-			className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0"
+			className="max-w-7xl px-8 md:px-16 relative mx-auto py-20 md:py-40 w-full  left-0 top-0"
 			{...props}
 		>
 			<h1 className="text-2xl md:text-7xl font-bold bg-gradient-to-r from-gray-400 to-gray-700 bg-clip-text text-transparent leading-tight">
