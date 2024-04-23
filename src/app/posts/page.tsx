@@ -1,9 +1,10 @@
 import { format } from 'date-fns';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { PostsService } from '../../lib/api';
 import { baseUrl } from '../sitemap';
 
-export const metadata = {
+export const metadata: Metadata = {
 	title: `Blog`,
 	description:
 		'Thoughts and learnings around software development, with a focus on leveraging my expertise in PHP, JS, Typescript and WordPress.',
@@ -14,7 +15,8 @@ export const metadata = {
 		siteName: `Ashesh's Site`,
 		locale: 'en_US',
 		type: 'website'
-	}
+	},
+	metadataBase: new URL(baseUrl)
 };
 
 export default function Index() {

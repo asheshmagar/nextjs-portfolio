@@ -36,7 +36,8 @@ export const metadata: Metadata = {
 		siteName: `Ashesh's Site`,
 		locale: 'en_US',
 		type: 'website'
-	}
+	},
+	metadataBase: new URL(baseUrl)
 };
 
 export default function RootLayout({
