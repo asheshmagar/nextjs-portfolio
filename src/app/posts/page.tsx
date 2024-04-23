@@ -1,6 +1,21 @@
 import { format } from 'date-fns';
 import Link from 'next/link';
 import { PostsService } from '../../lib/api';
+import { baseUrl } from '../sitemap';
+
+export const metadata = {
+	title: `Blog`,
+	description:
+		'Thoughts and learnings around software development, with a focus on leveraging my expertise in PHP, JS, Typescript and WordPress.',
+	openGraph: {
+		title: `Ashesh's Blog`,
+		description: `Thoughts and learnings around software development, with a focus on leveraging my expertise in PHP, JS, Typescript and WordPress.`,
+		url: baseUrl + '/posts',
+		siteName: `Ashesh's Site`,
+		locale: 'en_US',
+		type: 'website'
+	}
+};
 
 export default function Index() {
 	const posts = PostsService.getAll();
