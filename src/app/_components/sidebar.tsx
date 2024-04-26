@@ -9,13 +9,13 @@ const Sidebar = () => {
 					<div className="px-8 pb-8 border-b-[1px] flex flex-col flex-none gap-4 h-min justify-center p-0 relative">
 						<Logo />
 						<div className="flex flex-col gap-1">
-							{/* <Link
-								href="/"
-								className="font-semibold text-lg text-gray-800 tracking-wider"
+							<Link
+								href="/about"
+								className="font-semibold text-lg text-gray-800 tracking-wider hover:opacity-70 hover:translate-x-1 transition duration-20"
 								prefetch
 							>
 								About
-							</Link> */}
+							</Link>
 							<Link
 								href="/posts"
 								className="font-semibold text-lg text-gray-800 tracking-wider hover:opacity-70 hover:translate-x-1 transition duration-20"
