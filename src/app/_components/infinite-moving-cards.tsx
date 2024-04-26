@@ -1,6 +1,7 @@
 'use client';
 
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 
 export const InfiniteMovingCards = ({
@@ -11,9 +12,8 @@ export const InfiniteMovingCards = ({
 	className
 }: {
 	items: {
-		quote: string;
 		name: string;
-		title: string;
+		image: string;
 	}[];
 	direction?: 'left' | 'right';
 	speed?: 'fast' | 'normal' | 'slow';
@@ -67,7 +67,7 @@ export const InfiniteMovingCards = ({
 		<div
 			ref={containerRef}
 			className={cn(
-				'scroller relative z-20  max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
+				'scroller relative z-20  max-w-full overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
 				className
 			)}
 		>
@@ -81,10 +81,10 @@ export const InfiniteMovingCards = ({
 			>
 				{items.map((item, idx) => (
 					<li
-						className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-gray-300 px-8 py-6 md:w-[450px]"
+						className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-gray-300 md:w-[450px]"
 						key={item.name}
 					>
-						<blockquote>
+						{/* <blockquote>
 							<div
 								aria-hidden="true"
 								className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
@@ -102,7 +102,14 @@ export const InfiniteMovingCards = ({
 									</span>
 								</span>
 							</div>
-						</blockquote>
+						</blockquote> */}
+						<Image
+							src={item.image}
+							alt={item.name}
+							width="350"
+							height="450"
+							className="aspect-[4/3] object-cover w-full"
+						/>
 					</li>
 				))}
 			</ul>
