@@ -69,7 +69,7 @@ export default function Index() {
 					},
 					{
 						name: 'My team two',
-						image: '/assets/about/IMG_7964.jpg'
+						image: '/assets/about/IMG_7964.JPG'
 					},
 					{
 						name: 'My team three',
@@ -81,7 +81,7 @@ export default function Index() {
 					},
 					{
 						name: 'My team five',
-						image: '/assets/about/IMG_7964.jpg'
+						image: '/assets/about/IMG_7964.JPG'
 					}
 				]}
 				speed="slow"
