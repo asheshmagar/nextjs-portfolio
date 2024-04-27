@@ -3,29 +3,6 @@
 import Image from 'next/image';
 import { InfiniteMovingCards } from '../_components/infinite-moving-cards';
 
-const testimonials = [
-	{
-		name: 'Charles Dickens',
-		image: '/assets/about/20240316_114221.jpg'
-	},
-	{
-		name: 'William Shakespeare',
-		image: '/assets/about/IMG_7964.jpg'
-	},
-	{
-		name: 'Edgar Allan Poe',
-		image: '/assets/about/20240317_122406.jpg'
-	},
-	{
-		name: 'Jane Austen',
-		image: '/assets/about/20240316_114223.jpg'
-	},
-	{
-		name: 'Herman Melville',
-		image: '/assets/about/IMG_7964.jpg'
-	}
-];
-
 export default function Index() {
 	const year = new Date().getFullYear();
 	return (
@@ -39,6 +16,7 @@ export default function Index() {
 						alt="Me"
 						width={500}
 						height={500}
+						priority
 					/>
 				</div>
 				<div className="max-w-lg rounded-0 md:max-w-2xl md:z-10 md:absolute md:top-0 lg:w-3/5 lg:left-0 lg:ml-20 xl:ml-12">
