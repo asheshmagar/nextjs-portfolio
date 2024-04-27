@@ -109,6 +109,7 @@ export const InfiniteMovingCards = ({
 							width="350"
 							height="450"
 							className="aspect-[4/3] object-cover w-full"
+							priority
 						/>
 					</li>
 				))}
