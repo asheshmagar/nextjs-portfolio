@@ -9,7 +9,9 @@ import { baseUrl } from './sitemap';
 
 const titillium = Titillium_Web({
 	subsets: ['latin'],
-	weight: ['200', '300', '400', '600', '700', '900']
+	weight: ['200', '300', '400', '600', '700', '900'],
+	preload: true,
+	variable: '--font-titillium'
 });
 
 export const metadata: Metadata = {
