@@ -25,6 +25,10 @@ export default function Index() {
 						<h1 className="text-[100px] md:text-[172px] font-bold leading-none z-[1] bg-gradient-to-r from-gray-400 to-gray-700 bg-clip-text text-transparent">
 							Ashesh <br /> Thapa
 						</h1>
+						<div className="mt-4 flex text-2xl items-baseline gap-4 bg-gradient-to-r from-gray-400 to-gray-700 bg-clip-text text-transparent">
+							<span className="">अशेष थापा</span>
+							<small>/uh-shesh/</small>
+						</div>
 					</div>
 				</div>
 			</div>
