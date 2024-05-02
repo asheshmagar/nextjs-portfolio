@@ -21,18 +21,12 @@ export default function Index() {
 				className="flex flex-col"
 			>
 				<div className="group">
-					<h1 className="text-lg md:text-3xl flex items-end font-semibold bg-gradient-to-r from-gray-400 to-gray-700 bg-clip-text text-transparent">
-						Hey, I'm{' '}
-						<ruby className="ml-4">
-							Ashesh <rt>अशेष</rt>
-						</ruby>
+					<h1 className="text-md md:text-lg flex gap-2 items-end font-semibold bg-gradient-to-r from-gray-400 to-gray-700 bg-clip-text text-transparent">
+						Hey there, <span>स्वागतम !</span>
 					</h1>
-					<small className="bg-gradient-to-r from-gray-400 to-gray-700 bg-clip-text text-transparent">
-						My name is pronounced as /uh-shesh/
-					</small>
 				</div>
 				<div className="group">
-					<motion.h2 className="mt-8 text-[22px] md:text-[42px] font-semibold text-gray-600 tracking-tight leading-none md:leading-[56px] bg-gradient-to-r from-gray-500 to-gray-800  bg-clip-text text-transparent">
+					<motion.h2 className="mt-6 text-[22px] md:text-[42px] font-semibold text-gray-600 tracking-tight leading-none md:leading-[56px] bg-gradient-to-r from-gray-500 to-gray-800  bg-clip-text text-transparent">
 						Ashesh, a full stack developer based in Kathmandu, currently holds the
 						position of Senior Developer and Team Lead at ThemeGrill Pvt Limited. He
 						brings a wealth of experience in PHP, WordPress, JavaScript, TypeScript,
