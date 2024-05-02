@@ -27,10 +27,10 @@ export default function Index() {
 				</div>
 				<div className="group">
 					<motion.h2 className="mt-6 text-[22px] md:text-[42px] font-semibold text-gray-600 tracking-tight leading-none md:leading-[56px] bg-gradient-to-r from-gray-500 to-gray-800  bg-clip-text text-transparent">
-						Ashesh, a full stack developer based in Kathmandu, currently holds the
+						Ashesh is a full stack developer based in Kathmandu, currently holds the
 						position of Senior Developer and Team Lead at ThemeGrill Pvt Limited. He
 						brings a wealth of experience in PHP, WordPress, JavaScript, TypeScript,
-						React, and diverse web technologies to his role.
+						React, MySql and diverse web technologies to his role.
 					</motion.h2>
 				</div>
 				<div className="pt-[40px]">
