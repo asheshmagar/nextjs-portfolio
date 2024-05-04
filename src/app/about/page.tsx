@@ -12,7 +12,7 @@ export default function Index() {
 					<div className="absolute transition-colors bg-[radial-gradient(50%_50%_at_50%_50%,_rgba(255,_255,_255,_0)_0%,_rgba(255,_255,_255,_0.8)_100%)] inset-[-45px_-56px_-51px_-149px]"></div>
 					<Image
 						className="h-full w-full object-cover rounded"
-						src="/assets/about/me1.jpg"
+						src="/assets/about/me.jpg"
 						alt="Me"
 						width={500}
 						height={500}
